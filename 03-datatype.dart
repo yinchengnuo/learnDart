@@ -10,10 +10,12 @@ void main() {
 
   // number
 
-  int num = 123;
+  num asdfas = 666;
+
+  print(asdfas);
   double numnum = 123.231;
 
-  print(num);
+  print(int);
   print(numnum);
 
   // list
@@ -40,5 +42,19 @@ void main() {
   var str = '123';
   print(str is int);
 
-  // 
+  // parse 
+
+  String stringToNum = '';
+
+  num nan = 123;
+  
+
+  num numFromString = stringToNum.isEmpty ? 0 : num.parse(stringToNum);
+
+  print(numFromString);
+
+  // toString
+
+
+
 }
