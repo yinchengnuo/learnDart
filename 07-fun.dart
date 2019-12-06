@@ -22,6 +22,33 @@ int fun3(String name, { int age, @required int height }) { // 被 @required 标�
   print(height);
 }
 
+List arr = ['a', 'b', 'c'];
+
+dynamic fun4 = (String name, int age) {
+  print(age);
+  print(name);
+};
+
+Function fun5 = () {
+  print(123);
+};
+
+int sum = 0;
+fun6(int n) {
+  sum += n;
+  if (n == 0) {
+    return sum;
+  }
+  fun6(n -1);
+}
+
+fun7() {
+  int a = 0;
+  return () {
+    a ++;
+    print(a);
+  };
+}
 
 void main(){
   printInfo();
@@ -30,4 +57,17 @@ void main(){
   fun2('尹成诺', 24);
   fun3('尹成诺', age: 24);
   fun3('尹成诺', age: 24, height: 175);
+
+  arr.forEach((e) => print(e));
+
+  fun4('尹成诺', 18);
+  fun5();
+
+  fun6(100);
+  print(sum);
+
+  Function fun8 = fun7();
+  fun8();
+  fun8();
+  fun8();
 }
